@@ -60,7 +60,7 @@ function App() {
 
   return (
     <main className=" min-h-[100vh] flex justify-center items-center mx-4 ">
-      <div className=" bg-white max-w-[840px] w-full py-12 px-6 min-[841px]:p-[3.5rem] rounded-[24px] rounded-br-[100px]">
+      <div className=" bg-white max-w-[840px] w-full py-12 px-6 min-[841px]:p-[3.5rem] rounded-[24px] rounded-br-[100px] min-[841px]:rounded-br-[200px]">
         <form className=" text-xl" onSubmit={handleSubmit}>
           <div className="flex justify-left gap-4">
             <div className=" flex flex-col">
@@ -71,6 +71,7 @@ function App() {
                 type="number"
                 placeholder="DD"
                 name="day"
+                id="day"
                 className= {`${dayError.error === true ? 'border-light-red' : 'border-light-grey'} border-[1px] py-3 px-4 w-full  rounded-md focus:outline-none max-w-[10rem]`}
               />
               <span
@@ -89,6 +90,7 @@ function App() {
                 type="number"
                 placeholder="MM"
                 name="month"
+                id='month'
                 className={`${monthError.error === true ? 'border-light-red': 'border-light-grey'} border-[1px] py-3 px-4 w-full rounded-md focus:outline-none max-w-[10rem]`}
               />
               <span
@@ -107,6 +109,7 @@ function App() {
                 type="number"
                 placeholder="YYYY"
                 name="year"
+                id='year'
                 className={`${yearError.error === true ? 'border-light-red' : 'border-light-grey'} border-[1px] border-light-grey py-3 px-4 w-full rounded-md focus:outline-none max-w-[10rem]`}
               />
               <span
@@ -119,7 +122,7 @@ function App() {
             </div>
           </div>
           <div className="my-4 flex max-[840px]:justify-center justify-end relative z-0 before-content-[*] before:absolute before:w-full before:h-[1px] before:bg-light-grey  before:top-[50%] before:left-0">
-            <button className="hover:bg-off-black transition-all bg-purple rounded-full p-7 z-10">
+            <button ho aria-label="submit" role="button" className="hover:bg-off-black transition-all bg-purple rounded-full p-7 z-10">
               <svg
                 className="hover:stroke-white stroke-white"
                 xmlns="http://www.w3.org/2000/svg"
